@@ -1,4 +1,0 @@
-CPU Usage: 19.1%
-Temperature: 53.2'C
-°C
-Memory Usage: 60.0%
