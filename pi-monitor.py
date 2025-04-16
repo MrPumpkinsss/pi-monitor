@@ -1,8 +1,8 @@
 import os
 import time
 import psutil
-import pyautogui
 import subprocess
+
 from git import Repo
 
 # 设置文件保存路径
@@ -32,8 +32,9 @@ def get_memory_usage():
     return memory.percent
 
 def take_screenshot():
-    """截取屏幕截图并保存"""
-    pyautogui.screenshot(screenshot_path)
+    """使用 scrot 工具截图"""
+    subprocess.run(['scrot', screenshot_path])
+
 
 def create_status_file():
     """创建包含系统状态信息的txt文件"""
