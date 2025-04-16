@@ -71,8 +71,8 @@ def main():
         print(f"Status file saved at {status_path}")
         print("Screenshot and status data uploaded.")
 
-        # 每隔60秒执行一次
-        time.sleep(60)
+        # 每隔600秒执行一次
+        time.sleep(600)
 
 if __name__ == "__main__":
     main()
