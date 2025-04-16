@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pi Monitor</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .background {
+      background-image: url('./screenshots/screenshot.png');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(2px) brightness(0.7);
+    }
+
+    .overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      max-width: 400px;
+      margin: 2rem;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    .data {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .timestamp {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .overlay {
+        max-width: 90%;
+        margin: 1rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+  <div class="overlay" id="statusDisplay">
+    <div class="data">Loading status...</div>
+  </div>
+
+  <script>
+    async function loadStatus() {
+      try {
+        // Fetch status.txt
+        const response = await fetch('./status/status.txt');
+        if (!response.ok) throw new Error("Status file not found.");
+        const text = await response.text();
+
+        // Parse lines like:
+        // CPU Usage: 1.8%
+        // Temperature: 48.3'C
+        // Memory Usage: 32.3%
+        const lines = text.trim().split('\n');
+        const status = {};
+        lines.forEach(line => {
+          const [key, value] = line.split(':');
+          if (key && value) {
+            status[key.trim()] = value.trim();
+          }
+        });
+
+        // Fetch file modified time (timestamp)
+        const head = await fetch('./status/status.txt', { method: 'HEAD' });
+        const lastModified = head.headers.get('Last-Modified');
+
+        const container = document.getElementById('statusDisplay');
+        container.innerHTML = `
+          <div class="data">🖥️ CPU: ${status["CPU Usage"] || "N/A"}</div>
+          <div class="data">🌡️ 温度: ${status["Temperature"] || "N/A"}</div>
+          <div class="data">💾 内存: ${status["Memory Usage"] || "N/A"}</div>
+          <div class="timestamp">更新时间: ${new Date(lastModified).toLocaleString()}</div>
+        `;
+      } catch (e) {
+        document.getElementById('statusDisplay').innerHTML = `<div class="data">无法加载状态信息</div>`;
+      }
+    }
+
+    loadStatus();
+  </script>
+</body>
+</html>
