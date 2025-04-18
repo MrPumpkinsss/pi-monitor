@@ -1,104 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pi Monitor</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
+      min-height: 100%;
       font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #232526 0%, #414345 100%);
+      color: #fff;
+      box-sizing: border-box;
     }
-
-    .background {
-      background-image: url('./screenshots/screenshot.png');
-      background-size: cover;
-      background-position: center;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      filter: blur(1px) brightness(0.9);
+    .container {
+      max-width: 420px;
+      margin: 2rem auto;
+      background: rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 2rem 1.2rem;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+      backdrop-filter: blur(3px);
     }
-
-    .overlay {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 2rem;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.4);
-      max-width: 400px;
-      margin: 2rem;
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
-    }
-
     .data {
-      font-size: 1.5rem;
-      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      margin: 0.7rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
     }
-
     .timestamp {
-      font-size: 0.9rem;
-      margin-top: 1rem;
-      color: #ccc;
+      font-size: 0.95rem;
+      color: #bbb;
+      margin-top: 1.2rem;
     }
-
+    .proc-toggle {
+      background: #2d8cf0;
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(45,140,240,0.15);
+    }
+    .proc-toggle:hover {
+      background: #1e6bb8;
+    }
+    .proclist {
+      margin-top: 1.1rem;
+      background: rgba(26, 26, 28, 0.97);
+      border-radius: 8px;
+      overflow-x: auto;
+      max-height: 65vh;
+      font-size: 0.97rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      display: none;
+    }
+    .proclist table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #f1f1f1;
+    }
+    .proclist th, .proclist td {
+      padding: 0.32em 0.7em;
+      text-align: left;
+      border-bottom: 1px solid #333;
+      white-space: nowrap;
+    }
+    .proclist th {
+      background: #222d3d;
+      color: #8cc3ff;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .proclist tr:last-child td {
+      border-bottom: none;
+    }
     @media (max-width: 600px) {
-      .overlay {
-        max-width: 90%;
+      .container {
+        max-width: 97vw;
+        padding: 1.1rem 0.5rem;
         margin: 1rem auto;
+      }
+      .proclist {
+        font-size: 0.88rem;
+        max-height: 45vh;
       }
     }
   </style>
 </head>
 <body>
-
-  <div class="background"></div>
-  <div class="overlay" id="statusDisplay">
-    <div class="data">Loading status...</div>
+  <div class="container">
+    <div id="statusDisplay">
+      <div class="data">加载状态中...</div>
+    </div>
+    <button class="proc-toggle" id="toggleProcBtn" style="display:none;">显示进程列表</button>
+    <div class="proclist" id="procList"></div>
   </div>
-
   <script>
     async function loadStatus() {
       try {
-        // Fetch status.txt
         const response = await fetch('./status/status.txt');
         if (!response.ok) throw new Error("Status file not found.");
         const text = await response.text();
 
-        // Parse lines like:
-        // CPU Usage: 1.8%
-        // Temperature: 48.3'C
-        // Memory Usage: 32.3%
-        const lines = text.trim().split('\n');
+        // 分割通用状态和进程列表
+        let [meta, ...rest] = text.split('\n\n');
+        const lines = meta.trim().split('\n');
         const status = {};
         lines.forEach(line => {
           const [key, value] = line.split(':');
-          if (key && value) {
-            status[key.trim()] = value.trim();
-          }
+          if (key && value) status[key.trim()] = value.trim();
         });
 
-        // Fetch file modified time (timestamp)
+        // 获取更新时间
         const head = await fetch('./status/status.txt', { method: 'HEAD' });
         const lastModified = head.headers.get('Last-Modified');
 
+        // 显示状态信息
         const container = document.getElementById('statusDisplay');
         container.innerHTML = `
           <div class="data">🖥️ CPU: ${status["CPU Usage"] || "N/A"}</div>
           <div class="data">🌡️ 温度: ${status["Temperature"] || "N/A"}</div>
           <div class="data">💾 内存: ${status["Memory Usage"] || "N/A"}</div>
-          <div class="timestamp">更新时间: ${new Date(lastModified).toLocaleString()}</div>
+          <div class="timestamp">更新时间: ${lastModified ? new Date(lastModified).toLocaleString() : 'N/A'}</div>
         `;
+
+        // 解析进程列表
+        const procBtn = document.getElementById('toggleProcBtn');
+        const procDiv = document.getElementById('procList');
+        let procListTxt = "";
+        for (let part of rest) {
+          if (part.trim().startsWith("Task Manager:")) {
+            procListTxt = part.trim();
+            break;
+          }
+        }
+        if (procListTxt) {
+          procBtn.style.display = '';
+          // 处理表头和数据
+          const lines = procListTxt.split('\n');
+          // 找到表头的分割线
+          let startIdx = 0;
+          for (let i = 0; i < lines.length; i++) {
+            if (lines[i].includes('PID') && lines[i].includes('Name')) {
+              startIdx = i;
+              break;
+            }
+          }
+          const headerLine = lines[startIdx];
+          const separatorIdx = lines.findIndex(line => line.startsWith('='));
+          const dataLines = lines.slice(separatorIdx+1);
+
+          // 生成表格
+          let table = `<table><thead><tr>`;
+          headerLine.trim().split(/\s+/).forEach(h => table += `<th>${h}</th>`);
+          table += `</tr></thead><tbody>`;
+          dataLines.forEach(line => {
+            if (line.trim() === '') return;
+            const cells = line.trim().split(/\s+/);
+            // PID Name(可能有空格) CPU% MEM%
+            // 合并name列（最长24字符），前两个cell是pid和name
+            if (cells.length < 4) return;
+            const pid = cells[0];
+            const cpu = cells[cells.length-2];
+            const mem = cells[cells.length-1];
+            const name = cells.slice(1, cells.length-2).join(' ');
+            table += `<tr><td>${pid}</td><td>${name}</td><td>${cpu}</td><td>${mem}</td></tr>`;
+          });
+          table += `</tbody></table>`;
+          procDiv.innerHTML = table;
+
+          // 按钮控制显示
+          let shown = false;
+          procBtn.onclick = () => {
+            shown = !shown;
+            procDiv.style.display = shown ? 'block' : 'none';
+            procBtn.textContent = shown ? '隐藏进程列表' : '显示进程列表';
+          };
+        }
       } catch (e) {
         document.getElementById('statusDisplay').innerHTML = `<div class="data">无法加载状态信息</div>`;
       }
     }
-
     loadStatus();
   </script>
 </body>
