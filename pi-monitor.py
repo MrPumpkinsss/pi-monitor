@@ -33,7 +33,7 @@ def get_memory_usage():
 
 def take_screenshot():
     """使用 scrot 工具截图"""
-    subprocess.run(['scrot', screenshot_path])
+    subprocess.run(['scrot', '-o', screenshot_path])
 
 
 def create_status_file():
