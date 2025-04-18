@@ -32,22 +32,12 @@ def get_memory_usage():
     return memory.percent
 
 def get_process_list():
-    """获取所有进程的任务管理器风格信息（含真实CPU占用率）"""
-    # 首先预热一次
-    procs = []
-    for proc in psutil.process_iter(['pid', 'name', 'memory_percent']):
-        try:
-            proc.cpu_percent(interval=None)
-            procs.append(proc)
-        except (psutil.NoSuchProcess, psutil.AccessDenied):
-            continue
-    # 等待0.5秒
-    time.sleep(0.5)
+    """获取所有进程的任务管理器风格信息"""
     process_info = []
-    for proc in procs:
+    for proc in psutil.process_iter(['pid', 'name', 'cpu_percent', 'memory_percent']):
         try:
-            info = proc.as_dict(attrs=['pid', 'name', 'memory_percent'])
-            info['cpu_percent'] = proc.cpu_percent(interval=None)
+            # 有可能在取信息时进程已经消失
+            info = proc.info
             process_info.append(info)
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
