@@ -1,13 +1,11 @@
-CPU Usage: 0.2%
+CPU Usage: 0.3%
 Temperature: 49.4°C
-Memory Usage: 37.1%
+Memory Usage: 37.6%
 
 Task Manager:
    PID Name                        CPU%   MEM%
 ================================================
- 31607 python3                      5.6    0.6
-  1680 panel-8-pulseau              1.9    0.7
- 99714 python                       1.9    1.7
+ 31607 python3                      7.4    0.6
      1 systemd                      0.0    0.3
      2 kthreadd                     0.0    0.0
      3 pool_workqueue_release       0.0    0.0
@@ -58,7 +56,7 @@ Task Manager:
     73 kworker/R-nvme-delete-wq     0.0    0.0
     74 kworker/R-DWC Notificati     0.0    0.0
     75 kworker/R-uas                0.0    0.0
-    77 kworker/u21:0-brcmf_wq/m     0.0    0.0
+    77 kworker/u21:0+brcmf_wq/m     0.0    0.0
     78 kworker/u22:0                0.0    0.0
     79 kworker/u23:0                0.0    0.0
     80 kworker/u24:0                0.0    0.0
@@ -140,7 +138,7 @@ Task Manager:
   1087 gvfsd-fuse                   0.0    0.1
   1097 openbox                      0.0    0.5
   1101 lxpolkit                     0.0    0.3
-  1102 lxpanel                      0.0    5.2
+  1102 lxpanel                      0.0    5.3
   1104 pcmanfm                      0.0    2.0
   1123 ssh-agent                    0.0    0.0
   1126 systemd-inhibit              0.0    0.1
@@ -151,7 +149,7 @@ Task Manager:
   1149 light-locker                 0.0    1.9
   1156 colord                       0.0    0.3
   1178 dconf-service                0.0    0.1
-  1199 Xvnc                         0.0   10.2
+  1199 Xvnc                         0.0   10.6
   1254 sh                           0.0    0.0
   1255 xfce4-session                0.0    1.6
   1256 xfce4-session                0.0    1.6
@@ -179,12 +177,13 @@ Task Manager:
   1513 xfdesktop                    0.0    2.4
   1587 xfce4-power-manager          0.0    0.4
   1588 xfce4-notifyd                0.0    0.4
-  1591 dockerd                      0.0    1.6
+  1591 dockerd                      0.0    1.0
   1600 xcompmgr                     0.0    0.1
   1608 systemd-inhibit              0.0    0.1
   1615 dconf-service                0.0    0.1
   1621 xiccd                        0.0    0.2
   1676 panel-6-systray              0.0    0.9
+  1680 panel-8-pulseau              0.0    0.7
   1681 panel-10-notifi              0.0    0.8
   1701 gtk-nop                      0.0    0.4
   1726 panel-14-action              0.0    0.6
@@ -209,7 +208,7 @@ Task Manager:
   2769 panel-25-batter              0.0    0.6
   2770 panel-29-system              0.0    0.7
   2835 xfce4-notifyd                0.0    0.4
-  2915 Thunar                       0.0    0.5
+  2915 Thunar                       0.0    1.5
   2947 xcompmgr                     0.0    0.1
   2953 systemd-inhibit              0.0    0.1
   2957 xiccd                        0.0    0.2
@@ -243,9 +242,7 @@ Task Manager:
  40500 gvfsd-trash                  0.0    0.2
  40513 gvfsd-network                0.0    0.2
  40615 gvfsd-dnssd                  0.0    0.2
- 48515 kworker/0:2H-mmc_complet     0.0    0.0
  52739 htcacheclean                 0.0    0.0
- 59440 apache2                      0.0    0.5
  63580 kworker/1:0H-kblockd         0.0    0.0
  67749 xdg-desktop-portal           0.0    0.3
  67764 xdg-document-portal          0.0    0.2
@@ -255,54 +252,56 @@ Task Manager:
  67889 gnome-keyring-daemon         0.0    0.2
  78983 gvfsd-recent                 0.0    0.2
  88813 gvfsd-http                   0.0    0.2
- 88892 kworker/u16:0-v3d_render     0.0    0.0
  89069 kworker/2:1H-kblockd         0.0    0.0
- 90869 kworker/u16:2-ipv6_addrc     0.0    0.0
- 94796 xfce4-terminal               0.0    1.2
- 94826 bash                         0.0    0.1
- 96148 geany                        0.0    1.3
- 96196 bash                         0.0    0.1
- 99444 xfce4-terminal               0.0    1.0
- 99474 bash                         0.0    0.1
+ 94796 xfce4-terminal               0.0    1.3
  99553 bash                         0.0    0.1
  99675 sh                           0.0    0.0
  99677 python                       0.0    1.2
-100459 kworker/3:2H-kblockd         0.0    0.0
-101461 kworker/3:1H                 0.0    0.0
+ 99714 python                       0.0    1.7
 109071 cupsd                        0.0    0.2
-109072 apache2                      0.0    0.2
-109073 apache2                      0.0    0.2
-109074 apache2                      0.0    0.2
-109075 apache2                      0.0    0.2
-109076 apache2                      0.0    0.2
 109078 cups-browsed                 0.0    0.3
-111180 kworker/u19:1-kvfree_rcu     0.0    0.0
-111522 kworker/1:1H                 0.0    0.0
-111751 kworker/u18:1-flush-179:     0.0    0.0
-111757 kworker/u20:1-flush-179:     0.0    0.0
-111927 kworker/u20:0-flush-179:     0.0    0.0
-112154 kworker/2:0H                 0.0    0.0
-112185 kworker/u17:1-kvfree_rcu     0.0    0.0
-112294 git                          0.0    0.1
-112295 git                          0.0    0.1
-112578 kworker/u18:0-kvfree_rcu     0.0    0.0
-112801 kworker/u19:0-flush-179:     0.0    0.0
-113200 kworker/u17:0-writeback      0.0    0.0
-113510 kworker/0:1H                 0.0    0.0
-113629 kworker/u18:2-kvfree_rcu     0.0    0.0
-113648 kworker/u17:2-kvfree_rcu     0.0    0.0
-113795 kworker/2:0-events_freez     0.0    0.0
-113937 kworker/1:2-events           0.0    0.0
-113941 kworker/0:1-events           0.0    0.0
-114005 kworker/3:1-events           0.0    0.0
-114006 kworker/1:1-events           0.0    0.0
-114007 kworker/2:1-events           0.0    0.0
-114008 kworker/0:0-events_freez     0.0    0.0
-114014 kworker/u19:2-ext4-rsv-c     0.0    0.0
-114020 kworker/3:0-events           0.0    0.0
-114021 kworker/1:0-events           0.0    0.0
-114022 kworker/2:2+events           0.0    0.0
-114073 kworker/0:2-events           0.0    0.0
-114076 xfconfd                      0.0    0.1
-114082 xfconfd                      0.0    0.1
-114086 kworker/3:2                  0.0    0.0
+112801 kworker/u19:0-kvfree_rcu     0.0    0.0
+116500 kworker/3:0H-kblockd         0.0    0.0
+119508 gvfsd-metadata               0.0    0.1
+129409 kworker/u16:0-ipv6_addrc     0.0    0.0
+129521 kworker/u20:0-flush-179:     0.0    0.0
+129603 kworker/u17:1-kvfree_rcu     0.0    0.0
+131616 kworker/u18:0-flush-179:     0.0    0.0
+141868 kworker/0:0H                 0.0    0.0
+142178 kworker/3:2H                 0.0    0.0
+142303 kworker/2:0H                 0.0    0.0
+142893 apache2                      0.0    0.5
+142894 apache2                      0.0    0.2
+142895 apache2                      0.0    0.2
+142896 apache2                      0.0    0.2
+142897 apache2                      0.0    0.2
+142898 apache2                      0.0    0.2
+142913 apache2                      0.0    0.2
+143066 apache2                      0.0    0.2
+143573 gvfsd-recent                 0.0    0.2
+143623 gvfsd-computer               0.0    0.2
+147281 gvfsd-http                   0.0    0.2
+147364 kworker/u16:1-v3d_bin        0.0    0.0
+148100 kworker/1:2H                 0.0    0.0
+148851 kworker/u19:3-flush-179:     0.0    0.0
+148980 kworker/0:1H-mmc_complet     0.0    0.0
+149418 kworker/u17:2-flush-179:     0.0    0.0
+149459 kworker/u18:1-flush-179:     0.0    0.0
+149582 kworker/u17:0-events_unb     0.0    0.0
+149590 kworker/u20:2-flush-179:     0.0    0.0
+149637 kworker/0:0-events           0.0    0.0
+149718 kworker/1:2-events           0.0    0.0
+149734 kworker/3:0-events           0.0    0.0
+149735 kworker/0:1-events           0.0    0.0
+149740 kworker/2:0-events           0.0    0.0
+149745 kworker/0:2-events           0.0    0.0
+149746 kworker/1:1-events           0.0    0.0
+149758 kworker/2:2-mm_percpu_wq     0.0    0.0
+149759 kworker/u19:1-kvfree_rcu     0.0    0.0
+149761 kworker/3:1-events_freez     0.0    0.0
+149763 kworker/1:0-events           0.0    0.0
+149775 kworker/2:1-events_power     0.0    0.0
+149776 kworker/3:2-events           0.0    0.0
+149777 kworker/1:3-events           0.0    0.0
+149832 xfconfd                      0.0    0.1
+149837 xfconfd                      0.0    0.1
