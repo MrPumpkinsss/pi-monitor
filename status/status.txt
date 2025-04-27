@@ -1,11 +1,12 @@
 CPU Usage: 0.2%
-Temperature: 47.7°C
-Memory Usage: 38.9%
+Temperature: 49.4°C
+Memory Usage: 39.1%
 
 Task Manager:
    PID Name                        CPU%   MEM%
 ================================================
- 31607 python3                      5.6    0.6
+ 31607 python3                      7.4    0.6
+  1199 Xvnc                         1.8   10.7
      1 systemd                      0.0    0.3
      2 kthreadd                     0.0    0.0
      3 pool_workqueue_release       0.0    0.0
@@ -138,7 +139,7 @@ Task Manager:
   1087 gvfsd-fuse                   0.0    0.1
   1097 openbox                      0.0    0.5
   1101 lxpolkit                     0.0    0.3
-  1102 lxpanel                      0.0    8.4
+  1102 lxpanel                      0.0    8.6
   1104 pcmanfm                      0.0    2.0
   1123 ssh-agent                    0.0    0.0
   1126 systemd-inhibit              0.0    0.1
@@ -149,7 +150,6 @@ Task Manager:
   1149 light-locker                 0.0    1.8
   1156 colord                       0.0    0.3
   1178 dconf-service                0.0    0.1
-  1199 Xvnc                         0.0   10.7
   1254 sh                           0.0    0.0
   1255 xfce4-session                0.0    1.6
   1256 xfce4-session                0.0    1.6
@@ -267,43 +267,40 @@ Task Manager:
 173152 bash                         0.0    0.1
 173334 kworker/0:2H-mmc_complet     0.0    0.0
 173347 kworker/2:0H-kblockd         0.0    0.0
-182135 kworker/0:1H                 0.0    0.0
-182157 cupsd                        0.0    0.2
-182159 apache2                      0.0    0.2
-182160 apache2                      0.0    0.2
-182161 apache2                      0.0    0.2
-182162 apache2                      0.0    0.2
-182163 apache2                      0.0    0.2
-182164 cups-browsed                 0.0    0.3
 183172 kworker/1:2H-kblockd         0.0    0.0
-186201 kworker/u20:3-flush-179:     0.0    0.0
 186766 kworker/u19:1-kvfree_rcu     0.0    0.0
-187025 kworker/u18:2-kvfree_rcu     0.0    0.0
-187059 kworker/u20:1-flush-179:     0.0    0.0
 187177 kworker/1:0H                 0.0    0.0
-187201 kworker/u17:2-flush-179:     0.0    0.0
-187486 kworker/u18:0-flush-179:     0.0    0.0
-187721 kworker/u18:1-kvfree_rcu     0.0    0.0
 187733 kworker/3:1H                 0.0    0.0
-187768 kworker/2:2H                 0.0    0.0
-187859 kworker/u17:1-flush-179:     0.0    0.0
-187913 kworker/u19:2-kvfree_rcu     0.0    0.0
-188132 kworker/u19:0                0.0    0.0
-188145 kworker/3:3-mm_percpu_wq     0.0    0.0
-188148 kworker/1:0-events           0.0    0.0
-188161 kworker/2:1-events           0.0    0.0
-188185 kworker/1:3-events           0.0    0.0
-188187 kworker/0:0-events           0.0    0.0
-188195 kworker/2:0-events_freez     0.0    0.0
-188204 kworker/3:1-events           0.0    0.0
-188205 kworker/0:4-events           0.0    0.0
-188209 kworker/1:1-events_freez     0.0    0.0
-188213 kworker/2:2-events           0.0    0.0
-188214 kworker/3:2-events           0.0    0.0
-188215 kworker/0:1-events           0.0    0.0
-188268 xfconfd                      0.0    0.1
-188272 kworker/1:2-events_freez     0.0    0.0
-188274 xfconfd                      0.0    0.1
-188278 kworker/2:3-events           0.0    0.0
-188279 kworker/0:2-events_freez     0.0    0.0
-188280 kworker/3:0-events_freez     0.0    0.0
+187859 kworker/u17:1-events_unb     0.0    0.0
+187913 kworker/u19:2-flush-179:     0.0    0.0
+188283 git                          0.0    0.1
+188284 git                          0.0    0.1
+188322 kworker/u20:0-kvfree_rcu     0.0    0.0
+188908 kworker/u17:3-kvfree_rcu     0.0    0.0
+189093 kworker/u18:2-flush-179:     0.0    0.0
+189095 cupsd                        0.0    0.2
+189096 apache2                      0.0    0.2
+189097 apache2                      0.0    0.2
+189098 apache2                      0.0    0.2
+189099 apache2                      0.0    0.2
+189100 apache2                      0.0    0.2
+189101 cups-browsed                 0.0    0.3
+189106 kworker/2:1H                 0.0    0.0
+189125 kworker/u20:1-flush-179:     0.0    0.0
+189371 kworker/u18:1-kvfree_rcu     0.0    0.0
+189764 kworker/2:2-events           0.0    0.0
+189797 kworker/0:0H                 0.0    0.0
+189835 kworker/u18:3-kvfree_rcu     0.0    0.0
+189946 kworker/0:0-events           0.0    0.0
+189958 kworker/1:0-events           0.0    0.0
+189959 kworker/3:0-events           0.0    0.0
+189961 kworker/2:0-events           0.0    0.0
+189962 kworker/0:2-events           0.0    0.0
+189969 kworker/1:2-events           0.0    0.0
+189970 kworker/3:2-events           0.0    0.0
+189971 kworker/0:1-events_freez     0.0    0.0
+190023 kworker/2:1-events           0.0    0.0
+190025 xfconfd                      0.0    0.1
+190030 xfconfd                      0.0    0.1
+190038 kworker/1:1-events           0.0    0.0
+190040 kworker/3:1-events_freez     0.0    0.0
