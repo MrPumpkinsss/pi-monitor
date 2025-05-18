@@ -1,11 +1,11 @@
-CPU Usage: 0.5%
-Temperature: 47.7°C
-Memory Usage: 53.2%
+CPU Usage: 0.8%
+Temperature: 48.8°C
+Memory Usage: 53.4%
 
 Task Manager:
    PID Name                        CPU%   MEM%
 ================================================
- 31607 python3                      7.5    0.6
+ 31607 python3                      7.4    0.6
      1 systemd                      0.0    0.3
      2 kthreadd                     0.0    0.0
      3 pool_workqueue_release       0.0    0.0
@@ -138,7 +138,7 @@ Task Manager:
   1087 gvfsd-fuse                   0.0    0.1
   1097 openbox                      0.0    0.5
   1101 lxpolkit                     0.0    0.3
-  1102 lxpanel                      0.0   22.6
+  1102 lxpanel                      0.0   22.7
   1104 pcmanfm                      0.0    2.0
   1123 ssh-agent                    0.0    0.0
   1126 systemd-inhibit              0.0    0.1
@@ -267,18 +267,9 @@ Task Manager:
 173152 bash                         0.0    0.1
 224287 kworker/2:2H-kblockd         0.0    0.0
 301828 kworker/1:0H-kblockd         0.0    0.0
-323400 kworker/u17:0-kvfree_rcu     0.0    0.0
-324484 kworker/u18:0-kvfree_rcu     0.0    0.0
-324646 kworker/u20:2-kvfree_rcu     0.0    0.0
-324864 kworker/u19:0-kvfree_rcu     0.0    0.0
-325348 kworker/u19:1-kvfree_rcu     0.0    0.0
+325348 kworker/u19:1-writeback      0.0    0.0
 325366 kworker/0:2H-mmc_complet     0.0    0.0
-325661 kworker/2:1H                 0.0    0.0
 325815 kworker/3:2H                 0.0    0.0
-325820 git                          0.0    0.1
-325821 git                          0.0    0.1
-325944 kworker/u20:1-events_unb     0.0    0.0
-326385 kworker/u17:2-ext4-rsv-c     0.0    0.0
 326576 cupsd                        0.0    0.2
 326578 apache2                      0.0    0.2
 326579 apache2                      0.0    0.2
@@ -286,22 +277,27 @@ Task Manager:
 326581 apache2                      0.0    0.2
 326582 apache2                      0.0    0.2
 326583 cups-browsed                 0.0    0.3
-326971 kworker/0:0H                 0.0    0.0
-327217 kworker/u18:1-kvfree_rcu     0.0    0.0
-327226 kworker/1:2H                 0.0    0.0
-327235 kworker/2:1-events           0.0    0.0
-327339 kworker/u19:2-flush-179:     0.0    0.0
-327356 kworker/u20:0-kvfree_rcu     0.0    0.0
-327369 kworker/u18:2-flush-179:     0.0    0.0
-327372 kworker/0:1-events           0.0    0.0
-327380 kworker/1:2-events           0.0    0.0
-327381 kworker/3:2-events           0.0    0.0
-327440 kworker/2:2-events           0.0    0.0
-327446 kworker/u17:1-flush-179:     0.0    0.0
-327450 kworker/1:0-events           0.0    0.0
-327451 kworker/0:0-events           0.0    0.0
-327452 kworker/3:0-events           0.0    0.0
-327460 kworker/2:0-events           0.0    0.0
-327469 kworker/1:1-events           0.0    0.0
-327470 kworker/0:2-events           0.0    0.0
-327471 kworker/3:1-events           0.0    0.0
+327369 kworker/u18:2-kvfree_rcu     0.0    0.0
+327446 kworker/u17:1-kvfree_rcu     0.0    0.0
+327637 kworker/u20:2-kvfree_rcu     0.0    0.0
+327863 kworker/u18:0-flush-179:     0.0    0.0
+328155 kworker/0:0H                 0.0    0.0
+328327 kworker/u19:0-kvfree_rcu     0.0    0.0
+328452 kworker/u20:0-ext4-rsv-c     0.0    0.0
+328468 kworker/u17:3-writeback      0.0    0.0
+328771 kworker/u19:2-events_unb     0.0    0.0
+328880 kworker/u18:1-kvfree_rcu     0.0    0.0
+328912 kworker/2:0H                 0.0    0.0
+328980 kworker/u20:1-events_unb     0.0    0.0
+329019 kworker/0:1-events           0.0    0.0
+329028 kworker/1:2-events           0.0    0.0
+329041 kworker/2:2-events_power     0.0    0.0
+329050 kworker/0:0-events           0.0    0.0
+329051 kworker/1:0-events_power     0.0    0.0
+329102 kworker/3:1-events           0.0    0.0
+329103 kworker/2:0-events           0.0    0.0
+329119 kworker/1:1H                 0.0    0.0
+329120 kworker/3:0-events           0.0    0.0
+329123 kworker/0:2-events_power     0.0    0.0
+329124 kworker/2:1-events_power     0.0    0.0
+329128 kworker/1:1-events           0.0    0.0
