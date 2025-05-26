@@ -1,11 +1,11 @@
 CPU Usage: 0.2%
-Temperature: 46.1°C
-Memory Usage: 57.8%
+Temperature: 47.7°C
+Memory Usage: 58.0%
 
 Task Manager:
    PID Name                        CPU%   MEM%
 ================================================
- 31607 python3                      5.6    0.6
+ 31607 python3                      9.3    0.6
      1 systemd                      0.0    0.3
      2 kthreadd                     0.0    0.0
      3 pool_workqueue_release       0.0    0.0
@@ -138,7 +138,7 @@ Task Manager:
   1087 gvfsd-fuse                   0.0    0.1
   1097 openbox                      0.0    0.5
   1101 lxpolkit                     0.0    0.3
-  1102 lxpanel                      0.0   28.1
+  1102 lxpanel                      0.0   28.3
   1104 pcmanfm                      0.0    2.0
   1123 ssh-agent                    0.0    0.0
   1126 systemd-inhibit              0.0    0.1
@@ -265,7 +265,6 @@ Task Manager:
 157164 python                       0.0    2.4
 224287 kworker/2:2H-kblockd         0.0    0.0
 301828 kworker/1:0H-kblockd         0.0    0.0
-380176 kworker/u17:0-kvfree_rcu     0.0    0.0
 381299 cupsd                        0.0    0.2
 381300 apache2                      0.0    0.2
 381301 apache2                      0.0    0.2
@@ -273,30 +272,35 @@ Task Manager:
 381303 apache2                      0.0    0.2
 381304 apache2                      0.0    0.2
 381306 cups-browsed                 0.0    0.3
-381311 kworker/u18:0-kvfree_rcu     0.0    0.0
-381949 kworker/u19:1-kvfree_rcu     0.0    0.0
+381949 kworker/u19:1-events_unb     0.0    0.0
 382161 kworker/0:0H-mmc_complet     0.0    0.0
-382309 kworker/u20:2-kvfree_rcu     0.0    0.0
-382371 kworker/u19:0-ext4-rsv-c     0.0    0.0
-382510 kworker/u20:1-kvfree_rcu     0.0    0.0
 382945 kworker/3:2H                 0.0    0.0
 383160 kworker/2:1H                 0.0    0.0
-383370 kworker/u20:3-writeback      0.0    0.0
-383389 kworker/0:1H                 0.0    0.0
-383406 kworker/u17:1-events_unb     0.0    0.0
-383775 kworker/0:1-events           0.0    0.0
-383792 kworker/2:2-events_freez     0.0    0.0
-383820 kworker/u18:1-flush-179:     0.0    0.0
-383822 kworker/0:2-events           0.0    0.0
-383882 kworker/u19:2                0.0    0.0
-383895 kworker/1:3-events           0.0    0.0
-383896 kworker/2:0-events           0.0    0.0
-383897 kworker/3:2-events_freez     0.0    0.0
-383900 kworker/1:1H                 0.0    0.0
-383906 kworker/1:0-events           0.0    0.0
-383907 kworker/3:0-events           0.0    0.0
-383916 kworker/2:1-events           0.0    0.0
-383917 kworker/0:0-events           0.0    0.0
-383920 xfconfd                      0.0    0.1
-383925 xfconfd                      0.0    0.1
-383929 kworker/1:1-events_freez     0.0    0.0
+383370 kworker/u20:3-kvfree_rcu     0.0    0.0
+383406 kworker/u17:1-kvfree_rcu     0.0    0.0
+383933 git                          0.0    0.1
+383934 git                          0.0    0.1
+384077 kworker/u18:2-kvfree_rcu     0.0    0.0
+384215 kworker/u18:0-kvfree_rcu     0.0    0.0
+384299 kworker/u20:0-kvfree_rcu     0.0    0.0
+384980 kworker/u18:1-writeback      0.0    0.0
+384986 kworker/u17:2-events_unb     0.0    0.0
+384990 kworker/1:1H                 0.0    0.0
+385109 kworker/u20:1-flush-179:     0.0    0.0
+385275 kworker/u19:3-kvfree_rcu     0.0    0.0
+385299 kworker/0:1H                 0.0    0.0
+385455 kworker/1:1-events           0.0    0.0
+385456 kworker/2:2-events           0.0    0.0
+385463 kworker/3:1-mm_percpu_wq     0.0    0.0
+385527 kworker/0:0-events_power     0.0    0.0
+385528 kworker/3:0-events           0.0    0.0
+385529 kworker/1:0-events_freez     0.0    0.0
+385532 kworker/2:0-events           0.0    0.0
+385538 kworker/0:1-events           0.0    0.0
+385547 kworker/3:2-events           0.0    0.0
+385548 kworker/1:2-mm_percpu_wq     0.0    0.0
+385551 xfconfd                      0.0    0.1
+385555 kworker/u17:0                0.0    0.0
+385557 xfconfd                      0.0    0.1
+385561 kworker/2:1-events_power     0.0    0.0
+385562 kworker/0:2-events           0.0    0.0
