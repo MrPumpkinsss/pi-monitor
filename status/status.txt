@@ -1,12 +1,11 @@
-CPU Usage: 0.0%
+CPU Usage: 0.2%
 Temperature: 48.3°C
-Memory Usage: 68.9%
+Memory Usage: 69.0%
 
 Task Manager:
    PID Name                        CPU%   MEM%
 ================================================
  31607 python3                      7.4    0.6
-  1264 dbus-daemon                  1.8    0.1
      1 systemd                      0.0    0.3
      2 kthreadd                     0.0    0.0
      3 pool_workqueue_release       0.0    0.0
@@ -123,11 +122,11 @@ Task Manager:
    816 (sd-pam)                     0.0    0.1
    847 xrdp                         0.0    0.0
    854 login                        0.0    0.1
-   855 Xorg                         0.0    1.4
+   855 Xorg                         0.0    1.3
    857 agetty                       0.0    0.0
    861 pipewire                     0.0    0.2
    862 pipewire                     0.0    0.1
-   863 wireplumber                  0.0    0.7
+   863 wireplumber                  0.0    0.5
    864 pipewire-pulse               0.0    0.2
    866 dbus-daemon                  0.0    0.1
    873 rtkit-daemon                 0.0    0.1
@@ -139,24 +138,25 @@ Task Manager:
   1087 gvfsd-fuse                   0.0    0.1
   1097 openbox                      0.0    0.5
   1101 lxpolkit                     0.0    0.3
-  1102 lxpanel                      0.0   39.0
-  1104 pcmanfm                      0.0    2.0
+  1102 lxpanel                      0.0   39.1
+  1104 pcmanfm                      0.0    1.9
   1123 ssh-agent                    0.0    0.0
   1126 systemd-inhibit              0.0    0.1
   1136 xiccd                        0.0    0.1
   1139 xcompmgr                     0.0    0.1
-  1146 xfce4-power-manager          0.0    1.7
+  1146 xfce4-power-manager          0.0    1.6
   1147 gtk-nop                      0.0    1.6
   1149 light-locker                 0.0    1.8
   1156 colord                       0.0    0.3
   1178 dconf-service                0.0    0.1
-  1199 Xvnc                         0.0   10.4
+  1199 Xvnc                         0.0   10.3
   1254 sh                           0.0    0.0
   1255 xfce4-session                0.0    1.6
-  1256 xfce4-session                0.0    1.6
+  1256 xfce4-session                0.0    1.5
   1259 dbus-launch                  0.0    0.1
   1262 dbus-launch                  0.0    0.1
   1263 dbus-daemon                  0.0    0.1
+  1264 dbus-daemon                  0.0    0.1
   1265 xfce4-notifyd                0.0    0.4
   1266 gvfs-udisks2-volume-moni     0.0    0.3
   1274 upowerd                      0.0    0.2
@@ -166,7 +166,7 @@ Task Manager:
   1303 gvfs-gphoto2-volume-moni     0.0    0.1
   1325 gvfsd-trash                  0.0    0.2
   1357 ssh-agent                    0.0    0.1
-  1367 xfwm4                        0.0    2.4
+  1367 xfwm4                        0.0    2.3
   1373 gvfsd                        0.0    0.2
   1378 gvfsd-fuse                   0.0    0.1
   1397 bash                         0.0    0.1
@@ -214,21 +214,21 @@ Task Manager:
   2957 xiccd                        0.0    0.2
   2971 dconf-service                0.0    0.1
   2980 gtk-nop                      0.0    0.3
-  4897 Xorg                         0.0    1.4
+  4897 Xorg                         0.0    1.3
   4936 lightdm                      0.0    0.2
   4964 systemd                      0.0    0.2
   4967 (sd-pam)                     0.0    0.1
   5010 pipewire                     0.0    0.2
   5011 pipewire                     0.0    0.1
-  5012 wireplumber                  0.0    0.7
+  5012 wireplumber                  0.0    0.5
   5013 pipewire-pulse               0.0    0.2
   5014 dbus-daemon                  0.0    0.1
-  5021 pi-greeter                   0.0    1.6
+  5021 pi-greeter                   0.0    1.5
   5083 gvfsd                        0.0    0.2
   5091 gvfsd-fuse                   0.0    0.1
   5151 lightdm                      0.0    0.1
   6589 cloudflared                  0.0    1.0
- 32126 xdg-desktop-portal           0.0    0.3
+ 32126 xdg-desktop-portal           0.0    0.4
  32142 xdg-permission-store         0.0    0.1
  32156 xdg-desktop-portal-gtk       0.0    0.4
  32186 gnome-keyring-daemon         0.0    0.2
@@ -262,43 +262,40 @@ Task Manager:
 157131 bash                         0.0    0.1
 157159 python                       0.0    1.2
 157164 python                       0.0    2.5
-399512 kworker/0:1H-mmc_complet     0.0    0.0
+399512 kworker/0:1H-kblockd         0.0    0.0
 425130 kworker/2:0H-kblockd         0.0    0.0
 430266 kworker/1:2H-kblockd         0.0    0.0
 469636 kworker/3:2H-kblockd         0.0    0.0
-508929 cupsd                        0.0    0.2
-508930 cups-browsed                 0.0    0.3
-508931 apache2                      0.0    0.2
-508932 apache2                      0.0    0.2
-508933 apache2                      0.0    0.2
-508934 apache2                      0.0    0.2
-508935 apache2                      0.0    0.2
-508941 kworker/u19:0-kvfree_rcu     0.0    0.0
-510681 kworker/u19:2-events_unb     0.0    0.0
-512183 kworker/0:0H                 0.0    0.0
-512305 kworker/u20:0-flush-179:     0.0    0.0
-513756 kworker/u17:0-kvfree_rcu     0.0    0.0
-514168 kworker/u18:2-kvfree_rcu     0.0    0.0
 514322 git                          0.0    0.1
-514323 git                          0.0    0.1
-514421 kworker/u20:3-kvfree_rcu     0.0    0.0
-514598 kworker/u17:2-kvfree_rcu     0.0    0.0
-515111 kworker/u18:0-kvfree_rcu     0.0    0.0
-515589 kworker/u20:1                0.0    0.0
-515605 kworker/2:2H                 0.0    0.0
-515665 kworker/u17:1-flush-179:     0.0    0.0
-515737 kworker/1:1H                 0.0    0.0
-515861 kworker/u19:1-writeback      0.0    0.0
-515862 kworker/2:0-events           0.0    0.0
-515863 kworker/3:2-events_power     0.0    0.0
-515864 kworker/1:2-events           0.0    0.0
-515865 kworker/0:0-events_freez     0.0    0.0
-515868 kworker/3:0H                 0.0    0.0
-515883 kworker/3:0-events           0.0    0.0
-515884 kworker/1:1-events           0.0    0.0
-515885 kworker/0:2-events           0.0    0.0
-515897 kworker/2:2-events           0.0    0.0
-515920 kworker/3:1                  0.0    0.0
-515921 kworker/1:0-events           0.0    0.0
-515922 kworker/0:1-events           0.0    0.0
-515928 kworker/2:1-events           0.0    0.0
+514598 kworker/u17:2-ext4-rsv-c     0.0    0.0
+515861 kworker/u19:1-kvfree_rcu     0.0    0.0
+516017 kworker/u18:3-flush-179:     0.0    0.0
+516293 kworker/u20:0-kvfree_rcu     0.0    0.0
+516685 cupsd                        0.0    0.2
+516687 apache2                      0.0    0.2
+516688 apache2                      0.0    0.2
+516689 apache2                      0.0    0.2
+516690 apache2                      0.0    0.2
+516691 apache2                      0.0    0.2
+516692 cups-browsed                 0.0    0.3
+516915 kworker/2:2H                 0.0    0.0
+516964 kworker/3:0H                 0.0    0.0
+517077 kworker/0:2H                 0.0    0.0
+517087 kworker/u20:2-kvfree_rcu     0.0    0.0
+517107 kworker/u19:0-flush-179:     0.0    0.0
+517166 kworker/u18:1-kvfree_rcu     0.0    0.0
+517447 kworker/u17:1-writeback      0.0    0.0
+517452 kworker/1:0H                 0.0    0.0
+517464 kworker/3:2-events_freez     0.0    0.0
+517561 kworker/1:0-mm_percpu_wq     0.0    0.0
+517577 kworker/0:3-events           0.0    0.0
+517587 kworker/2:0-events           0.0    0.0
+517596 kworker/3:0-events           0.0    0.0
+517603 kworker/u19:2                0.0    0.0
+517609 kworker/1:1-events           0.0    0.0
+517610 kworker/0:0-events           0.0    0.0
+517611 kworker/2:1-events_power     0.0    0.0
+517614 kworker/0:0H                 0.0    0.0
+517615 kworker/3:1-events           0.0    0.0
+517621 kworker/1:2-events           0.0    0.0
+517622 kworker/0:1-events           0.0    0.0
