@@ -1,22 +1,12 @@
-CPU Usage: 32.9%
-Temperature: 50.5°C
-Memory Usage: 9.9%
+CPU Usage: 0.0%
+Temperature: 48.3°C
+Memory Usage: 27.7%
 
 Task Manager:
    PID Name                        CPU%   MEM%
 ================================================
-   845 Xorg                        15.5    2.0
-   863 wireplumber                 15.5    1.0
-   593 dbus-daemon                  7.7    0.1
-   714 NetworkManager               5.8    0.4
-   591 bluetoothd                   3.9    0.1
-   767 python3                      3.9    0.5
-   309 systemd-journald             1.9    0.4
-   562 kworker/u21:2-hci0           1.9    0.0
-   603 polkitd                      1.9    0.2
-   722 wpa_supplicant               1.9    0.2
-   761 nm-online                    1.9    0.2
-   782 lightdm                      1.9    0.2
+   767 python3                      7.5    0.6
+  1771 panel-25-batter              1.9    0.6
      1 systemd                      0.0    0.3
      2 kthreadd                     0.0    0.0
      3 pool_workqueue_release       0.0    0.0
@@ -25,10 +15,6 @@ Task Manager:
      6 kworker/R-sync_wq            0.0    0.0
      7 kworker/R-slub_flushwq       0.0    0.0
      8 kworker/R-netns              0.0    0.0
-     9 kworker/0:0-events           0.0    0.0
-    10 kworker/0:1-device_link_     0.0    0.0
-    11 kworker/0:0H-mmc_complet     0.0    0.0
-    12 kworker/u16:0-v3d_render     0.0    0.0
     13 kworker/R-mm_percpu_wq       0.0    0.0
     14 rcu_tasks_kthread            0.0    0.0
     15 rcu_tasks_rude_kthread       0.0    0.0
@@ -42,25 +28,14 @@ Task Manager:
     23 cpuhp/1                      0.0    0.0
     24 migration/1                  0.0    0.0
     25 ksoftirqd/1                  0.0    0.0
-    26 kworker/1:0-rcu_gp           0.0    0.0
-    27 kworker/1:0H-events_high     0.0    0.0
     28 cpuhp/2                      0.0    0.0
     29 migration/2                  0.0    0.0
     30 ksoftirqd/2                  0.0    0.0
-    31 kworker/2:0-events           0.0    0.0
-    32 kworker/2:0H-events_high     0.0    0.0
     33 cpuhp/3                      0.0    0.0
     34 migration/3                  0.0    0.0
     35 ksoftirqd/3                  0.0    0.0
-    36 kworker/3:0-events           0.0    0.0
-    37 kworker/3:0H-events_high     0.0    0.0
-    38 kworker/u17:0-events_unb     0.0    0.0
-    39 kworker/u18:0-events_unb     0.0    0.0
-    40 kworker/u19:0-events_unb     0.0    0.0
-    41 kworker/u20:0-events_unb     0.0    0.0
     42 kdevtmpfs                    0.0    0.0
     43 kworker/R-inet_frag_wq       0.0    0.0
-    44 kworker/u17:1-async          0.0    0.0
     45 kauditd                      0.0    0.0
     46 khungtaskd                   0.0    0.0
     47 oom_reaper                   0.0    0.0
@@ -69,24 +44,13 @@ Task Manager:
     50 kworker/R-kintegrityd        0.0    0.0
     51 kworker/R-kblockd            0.0    0.0
     52 kworker/R-blkcg_punt_bio     0.0    0.0
-    53 kworker/u17:2                0.0    0.0
     54 watchdogd                    0.0    0.0
-    55 kworker/u19:1-events_unb     0.0    0.0
-    56 kworker/u17:3-events_unb     0.0    0.0
     57 kworker/2:1H-kblockd         0.0    0.0
-    58 kworker/2:1-events           0.0    0.0
     59 kworker/R-rpciod             0.0    0.0
     60 kworker/R-xprtiod            0.0    0.0
-    61 kworker/u19:2                0.0    0.0
     62 kswapd0                      0.0    0.0
     63 kworker/R-nfsiod             0.0    0.0
     64 kworker/R-kthrotld           0.0    0.0
-    65 kworker/3:1-pm               0.0    0.0
-    66 kworker/3:2-cgroup_destr     0.0    0.0
-    67 kworker/3:3-rcu_gp           0.0    0.0
-    68 kworker/3:4-rcu_gp           0.0    0.0
-    69 kworker/3:5-pm               0.0    0.0
-    70 kworker/u20:1-ext4-rsv-c     0.0    0.0
     72 hwrng                        0.0    0.0
     73 kworker/R-iscsi_conn_cle     0.0    0.0
     74 kworker/R-nvme-wq            0.0    0.0
@@ -95,72 +59,32 @@ Task Manager:
     77 kworker/R-DWC Notificati     0.0    0.0
     78 kworker/R-uas                0.0    0.0
     79 kworker/3:1H-kblockd         0.0    0.0
-    80 kworker/u21:0-hci0           0.0    0.0
     81 kworker/u22:0                0.0    0.0
     82 kworker/u23:0                0.0    0.0
     83 kworker/u24:0                0.0    0.0
     84 kworker/u25:0                0.0    0.0
-    85 kworker/u20:2-events_unb     0.0    0.0
-    86 kworker/u20:3-events_unb     0.0    0.0
     87 irq/38-aerdrv                0.0    0.0
     89 kworker/R-sdhci              0.0    0.0
-    90 kworker/u20:4-events_unb     0.0    0.0
-    92 kworker/u20:5-events_unb     0.0    0.0
     93 irq/161-mmc0                 0.0    0.0
     94 kworker/R-sdhci              0.0    0.0
     95 irq/162-mmc1                 0.0    0.0
-    99 kworker/0:2-events           0.0    0.0
-   100 kworker/0:3-events           0.0    0.0
    101 kworker/R-mmc_complete       0.0    0.0
    102 kworker/0:1H-mmc_complet     0.0    0.0
    125 kworker/1:1H-kblockd         0.0    0.0
-   129 kworker/1:1-events           0.0    0.0
    214 kworker/R-v3d_bin            0.0    0.0
    215 kworker/R-v3d_render         0.0    0.0
    216 kworker/R-v3d_tfu            0.0    0.0
    217 kworker/R-v3d_csd            0.0    0.0
    218 kworker/R-v3d_cache_clea     0.0    0.0
    219 kworker/R-v3d_cpu            0.0    0.0
-   220 kworker/2:2H                 0.0    0.0
-   221 kworker/u18:1-events_unb     0.0    0.0
    248 kworker/3:2H-kblockd         0.0    0.0
    250 jbd2/mmcblk0p2-8             0.0    0.0
    251 kworker/R-ext4-rsv-conve     0.0    0.0
    269 kworker/R-mld                0.0    0.0
    270 kworker/R-ipv6_addrconf      0.0    0.0
    271 kworker/u16:1-v3d_bin        0.0    0.0
-   272 kworker/2:2-cgroup_destr     0.0    0.0
-   289 kworker/1:2H                 0.0    0.0
-   291 kworker/0:2H                 0.0    0.0
-   313 kworker/1:2-events_freez     0.0    0.0
-   330 kworker/1:3-cgroup_destr     0.0    0.0
-   331 kworker/1:4-cgroup_destr     0.0    0.0
-   332 kworker/2:3-rcu_gp           0.0    0.0
+   309 systemd-journald             0.0    0.4
    341 systemd-udevd                0.0    0.2
-   342 (udev-worker)                0.0    0.1
-   343 (udev-worker)                0.0    0.1
-   344 (udev-worker)                0.0    0.1
-   345 (udev-worker)                0.0    0.1
-   347 (udev-worker)                0.0    0.1
-   348 (udev-worker)                0.0    0.1
-   349 (udev-worker)                0.0    0.1
-   350 (udev-worker)                0.0    0.1
-   351 (udev-worker)                0.0    0.1
-   352 (udev-worker)                0.0    0.1
-   353 (udev-worker)                0.0    0.1
-   354 (udev-worker)                0.0    0.1
-   355 (udev-worker)                0.0    0.1
-   356 (udev-worker)                0.0    0.1
-   357 (udev-worker)                0.0    0.1
-   358 (udev-worker)                0.0    0.1
-   359 (udev-worker)                0.0    0.2
-   360 (udev-worker)                0.0    0.1
-   361 (udev-worker)                0.0    0.1
-   362 (udev-worker)                0.0    0.1
-   363 (udev-worker)                0.0    0.1
-   364 (udev-worker)                0.0    0.1
-   365 (udev-worker)                0.0    0.1
-   366 (udev-worker)                0.0    0.2
    415 spi10                        0.0    0.0
    438 irq/171-vc4 hdmi hpd con     0.0    0.0
    439 irq/172-vc4 hdmi hpd dis     0.0    0.0
@@ -176,41 +100,42 @@ Task Manager:
    472 card1-crtc1                  0.0    0.0
    473 card1-crtc2                  0.0    0.0
    474 card1-crtc3                  0.0    0.0
-   479 systemd-fsckd                0.0    0.2
    482 kworker/R-cfg80211           0.0    0.0
    502 irq/185-1000800000.codec     0.0    0.0
    503 kworker/R-brcmf_wq/mmc1:     0.0    0.0
    504 brcmf_wdog/mmc1:0001:1       0.0    0.0
-   553 kworker/u21:1-hci0           0.0    0.0
-   565 kworker/u21:3                0.0    0.0
-   576 kworker/u18:2-events_unb     0.0    0.0
+   562 kworker/u21:2-hci0           0.0    0.0
    584 systemd-timesyncd            0.0    0.2
    588 accounts-daemon              0.0    0.2
    590 avahi-daemon                 0.0    0.1
+   591 bluetoothd                   0.0    0.1
    592 cron                         0.0    0.1
+   593 dbus-daemon                  0.0    0.1
+   603 polkitd                      0.0    0.2
    609 systemd-logind               0.0    0.2
    610 thd                          0.0    0.1
    611 udisksd                      0.0    0.3
    615 avahi-daemon                 0.0    0.0
-   732 systemd-hostnamed            0.0    0.2
+   714 NetworkManager               0.0    0.5
+   722 wpa_supplicant               0.0    0.2
    743 ModemManager                 0.0    0.3
    765 cupsd                        0.0    0.2
    766 vncserver                    0.0    0.7
-   775 vncserver                    0.0    0.7
    781 containerd                   0.0    1.0
+   782 lightdm                      0.0    0.2
    784 systemd                      0.0    0.2
    797 xrdp-sesman                  0.0    0.0
-   812 nm-dispatcher                0.0    0.2
    814 sshd                         0.0    0.2
    815 (sd-pam)                     0.0    0.1
-   820 kworker/2:4-cgroup_destr     0.0    0.0
    828 xrdp                         0.0    0.0
    838 dbus                         0.0    0.2
-   844 (agetty)                     0.0    0.1
-   846 (agetty)                     0.0    0.1
+   844 login                        0.0    0.1
+   845 Xorg                         0.0    2.2
+   846 agetty                       0.0    0.0
    859 apache2                      0.0    0.5
    861 pipewire                     0.0    0.3
    862 pipewire                     0.0    0.1
+   863 wireplumber                  0.0    1.0
    864 pipewire-pulse               0.0    0.2
    866 dbus-daemon                  0.0    0.1
    873 rtkit-daemon                 0.0    0.1
@@ -220,4 +145,130 @@ Task Manager:
    885 apache2                      0.0    0.2
    886 apache2                      0.0    0.2
    919 krfcommd                     0.0    0.0
-   948 xauth                        0.0    0.0
+  1018 lightdm                      0.0    0.2
+  1022 lxsession                    0.0    0.3
+  1087 ssh-agent                    0.0    0.0
+  1096 gvfsd                        0.0    0.2
+  1101 gvfsd-fuse                   0.0    0.2
+  1107 openbox                      0.0    0.5
+  1113 lxpolkit                     0.0    0.3
+  1116 lxpanel                      0.0    2.7
+  1118 pcmanfm                      0.0    2.4
+  1129 ssh-agent                    0.0    0.0
+  1141 systemd-inhibit              0.0    0.1
+  1151 xiccd                        0.0    0.2
+  1152 gtk-nop                      0.0    1.6
+  1154 xcompmgr                     0.0    0.1
+  1161 xfce4-power-manager          0.0    1.6
+  1163 light-locker                 0.0    1.8
+  1171 colord                       0.0    0.3
+  1196 dconf-service                0.0    0.1
+  1243 xfce4-notifyd                0.0    0.4
+  1247 Xvnc                         0.0    2.2
+  1253 gvfs-udisks2-volume-moni     0.0    0.3
+  1254 upowerd                      0.0    0.1
+  1272 gvfs-afc-volume-monitor      0.0    0.2
+  1277 sh                           0.0    0.0
+  1279 xfce4-session                0.0    1.8
+  1280 xfce4-session                0.0    1.8
+  1291 dbus-launch                  0.0    0.1
+  1292 dbus-launch                  0.0    0.1
+  1293 dbus-daemon                  0.0    0.1
+  1294 dbus-daemon                  0.0    0.1
+  1302 gvfs-goa-volume-monitor      0.0    0.1
+  1311 gvfs-mtp-volume-monitor      0.0    0.1
+  1318 gvfs-gphoto2-volume-moni     0.0    0.2
+  1328 gvfsd-trash                  0.0    0.2
+  1369 ssh-agent                    0.0    0.0
+  1383 xfwm4                        0.0    2.9
+  1386 bash                         0.0    0.1
+  1406 gvfsd                        0.0    0.2
+  1412 gvfsd-fuse                   0.0    0.1
+  1435 menu-cached                  0.0    0.1
+  1484 xfsettingsd                  0.0    0.6
+  1507 xfce4-panel                  0.0    1.1
+  1538 Thunar                       0.0    0.6
+  1563 xfdesktop                    0.0    1.4
+  1585 cups-browsed                 0.0    0.3
+  1586 dockerd                      0.0    1.7
+  1618 xfce4-power-manager          0.0    0.4
+  1619 xfce4-notifyd                0.0    0.5
+  1624 xcompmgr                     0.0    0.1
+  1630 systemd-inhibit              0.0    0.1
+  1632 xiccd                        0.0    0.2
+  1699 gtk-nop                      0.0    0.4
+  1725 panel-6-systray              0.0    1.0
+  1731 panel-8-pulseau              0.0    0.8
+  1732 panel-10-notifi              0.0    0.9
+  1769 panel-14-action              0.0    0.7
+  1772 panel-29-system              0.0    0.6
+  1845 gvfs-udisks2-volume-moni     0.0    0.3
+  1865 ssh-agent                    0.0    0.0
+  1873 gpg-agent                    0.0    0.1
+  1884 gvfs-afc-volume-monitor      0.0    0.2
+  1891 gvfsd                        0.0    0.2
+  1902 gvfs-goa-volume-monitor      0.0    0.1
+  1907 gvfs-mtp-volume-monitor      0.0    0.1
+  1914 gvfs-gphoto2-volume-moni     0.0    0.2
+  1977 xfsettingsd                  0.0    0.5
+  1981 gvfsd-trash                  0.0    0.2
+  2010 gvfsd-metadata               0.0    0.1
+  2699 xfce4-panel                  0.0    1.1
+  2721 panel-6-systray              0.0    0.6
+  2722 panel-8-pulseau              0.0    0.8
+  2723 panel-10-notifi              0.0    0.9
+  2741 panel-14-action              0.0    0.7
+  2742 panel-25-batter              0.0    0.6
+  2743 panel-29-system              0.0    0.7
+  2814 xfce4-notifyd                0.0    0.4
+  2915 Thunar                       0.0    0.6
+  2944 xfce4-power-manager          0.0    0.4
+  2947 xcompmgr                     0.0    0.1
+  2953 systemd-inhibit              0.0    0.2
+  2955 xiccd                        0.0    0.2
+  2974 dconf-service                0.0    0.1
+  2982 gtk-nop                      0.0    0.4
+  3650 kworker/u16:0-ipv6_addrc     0.0    0.0
+  3847 cloudflared                  0.0    0.9
+  3871 Xorg                         0.0    2.2
+  3880 kworker/u21:1-brcmf_wq/m     0.0    0.0
+  3911 lightdm                      0.0    0.2
+  3945 systemd                      0.0    0.3
+  3948 (sd-pam)                     0.0    0.1
+  3985 pipewire                     0.0    0.3
+  3986 pipewire                     0.0    0.1
+  3987 wireplumber                  0.0    1.0
+  3990 pipewire-pulse               0.0    0.2
+  3991 dbus-daemon                  0.0    0.1
+  3997 pi-greeter                   0.0    3.8
+  4046 gvfsd                        0.0    0.2
+  4059 gvfsd-fuse                   0.0    0.1
+  4109 lightdm                      0.0    0.1
+  4367 kworker/1:0H                 0.0    0.0
+  4380 kworker/u18:0-flush-179:     0.0    0.0
+  4587 kworker/u17:0-writeback      0.0    0.0
+  4595 kworker/u19:1-flush-179:     0.0    0.0
+  4705 kworker/u20:3-ext4-rsv-c     0.0    0.0
+  5049 kworker/u17:1-kvfree_rcu     0.0    0.0
+  5050 kworker/u20:1-flush-179:     0.0    0.0
+  5187 kworker/u18:1-flush-179:     0.0    0.0
+  5295 kworker/u19:0-kvfree_rcu     0.0    0.0
+  5333 kworker/0:2H                 0.0    0.0
+  5334 kworker/u18:2                0.0    0.0
+  5347 kworker/2:2H                 0.0    0.0
+  5353 kworker/u20:0-kvfree_rcu     0.0    0.0
+  5418 kworker/u17:2-events_unb     0.0    0.0
+  5445 kworker/2:1-events           0.0    0.0
+  5446 kworker/3:2-cgroup_destr     0.0    0.0
+  5448 kworker/1:2-events           0.0    0.0
+  5449 kworker/0:0-events_freez     0.0    0.0
+  5451 kworker/3:1-events           0.0    0.0
+  5463 kworker/1:0-events           0.0    0.0
+  5464 kworker/0:1-events           0.0    0.0
+  5465 kworker/2:0-events_freez     0.0    0.0
+  5468 kworker/3:0-events           0.0    0.0
+  5471 kworker/1:1-events           0.0    0.0
+  5520 kworker/3:3                  0.0    0.0
+  5521 kworker/0:2-events           0.0    0.0
+  5522 kworker/2:2-mm_percpu_wq     0.0    0.0
+  5525 xfconfd                      0.0    0.1
